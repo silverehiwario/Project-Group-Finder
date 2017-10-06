@@ -7,12 +7,20 @@ var express = require("express");
 var path = require("path");
 var fs = require("fs");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "sophia01*",
-  database: "projectgroupfinderdb"
-});
+
+var env = process.env.NODE_ENV || 'development';
+var config = require(__dirname + "/config.json")[env];
+
+if (config.use_env_variable){
+  var connection = mysql.createConnection(process.env[config.use_env_variable]);
+  }else{
+   
+   var connection = mysql.createConnection(config);
+  }
+
+
+
+
 
 connection.connect(function(err) {
   if (err) {
