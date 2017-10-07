@@ -233,6 +233,9 @@ connection.query('UPDATE student_skillset_md5 SET ALGORITHMS= ? WHERE ALGORITHMS
      });
 
 
+
+
+
      app.get("/api/total", function(req, res) {
 
     connection.query("SELECT student_md5.Name, student_md5.Email, student_md5.Username, student_md5.Class FROM student_md5", function(err, results){
@@ -301,109 +304,6 @@ connection.query('UPDATE student_skillset_md5 SET ALGORITHMS= ? WHERE ALGORITHMS
 
     
 
-
-  /*  app.post("/api/tasurvey", function(req, res) {
-
-
-           //  var return_data = {};
-
-     async.parallel([
-       function(parallel_done) {
-              if (req.body.table0[0].id ){
-          connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [req.body.table0[0].id]  //function(err, results){
-         // if (err) return parallel_done(err);
-          //  return_data.table0 = results;
-
-            //   parallel_done();
-           });
-        }
-       
-        },  
-       function(parallel_done) {
-              if (req.body.table1[0].id ){
-          connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [req.body.table1[0].id]   //function(err, results){
-         // if (err) return parallel_done(err);
-          //  return_data.table1 = results;
-
-            //   parallel_done();
-           });
-       }
-        },  
-        function(parallel_done) {
-              if (req.body.table1[1].id ){
-          connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [req.body.table1[1].id]   //function(err, results){
-         // if (err) return parallel_done(err);
-          //  return_data.table1 = results;
-
-             //  parallel_done();
-           });
-       }
-        }, 
-       function(parallel_done) {
-              if (req.body.table2[0].id ){
-          connection.query( "DELETE FROM student_skillset_md5  WHERE id = ? ", [req.body.table2[0].id]  //function(err, results){
-         // if (err) return parallel_done(err);
-       // return_data.table2 = results;
-
-              // parallel_done();
-           });
-       }
-        }
-    ], function(err) {
-         if (err) console.log(err);
-        // connection.end();
-         res.send(return_data);
-        // console.log(return_data);
-    });
-
-
-        
-     });
-
-} */
-         
-                  
-       /* app.post("/tasurvey", function(req, res) {
-
-           console.log(req);
-          // for (var i =0; i< req.body.table0.length; i++){
-             // if (req.body.id1 ){
-           
-          connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [ parseInt(req.body.id1) ], function(err, results){
-          if (err) return (err);
-          console.log (results);
-           });
-     // }
-          
-          //for (var i =0; i< req.body.table1.length; i++){
-
-           // if (req.body.id2 ){
-          connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [parseInt(req.body.id2) ], function(err, results){
-          if (err) return (err);
-          console.log (results);
-
-           });
-        // }    
-
-         //if (req.body.id3 ){
-           connection.query( "DELETE FROM student_skillset_md5 WHERE id = ? ", [parseInt(req.body.id3) ],   function(err, results){
-          if (err) return (err);
-         console.log (results);
-
-          });
-       // }    
-          //for (var i =0; i< req.body.table2.length; i++){
-         // if (req.body.id4 ){
-          connection.query( "DELETE FROM student_skillset_md5  WHERE id = ? ", [parseInt(req.body.id4) ],  function(err, results){
-          if (err) return (err);
-          console.log (results);
-
-           });
-     //  }
-
-   });
-
-} */
 
           
 app.post("/tasurvey", function(req, res) {
