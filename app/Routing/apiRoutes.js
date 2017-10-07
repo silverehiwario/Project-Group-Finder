@@ -5,12 +5,6 @@
  var async      = require('async');
 
 
-var connection = mysql.createConnection({ 
-  host: "localhost",
-  user: "root",
-  password: "sophia01*",
-  database: "projectgroupfinderdb"
-});
 
 
 
