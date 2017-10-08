@@ -38,27 +38,7 @@
         });     
 
           } 
-            else if (req.body.Position === "Instructor"){
-             
-              connection.query('INSERT INTO instructors_md5 ( Name, Email, InstPass, Username, Position, Class) VALUES ( ?, ?, ?, ?,?,?);', [req.body.Name, req.body.Email, req.body.Password, req.body.Username, req.body.Position,req.body.Class], function(error, results, fields){
-            // var query = connection.query("INSERT tas_md5 SET ?,?,?,?,?,?",  [req.body.Name, req.body.Email, req.body.Password, req.body.Username, req.body.Position,req.body.Class], function(error, results, fields){
-            if(error) throw error;
-
-            if(error) {
-        
-            throw error;
-
-            }
-           else 
-               {
-                 res.send('Inserted Successfully!')
-               }
-             });     
-
-
-
-
-          } else {
+             else {
 
                     connection.query('INSERT INTO student_md5 ( Name, Email, StudentPass, Username, Class) VALUES ( ?, ?, ?, ?,?);', [req.body.Name, req.body.Email, req.body.Password, req.body.Username, req.body.Class], function(error, results, fields){
             // var query = connection.query("INSERT tas_md5 SET ?,?,?,?,?,?",  [req.body.Name, req.body.Email, req.body.Password, req.body.Username, req.body.Position,req.body.Class], function(error, results, fields){
