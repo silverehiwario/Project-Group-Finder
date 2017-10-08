@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Forms</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -110,7 +112,7 @@
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
       // depending on if a tables is available or not.
         if (newtas.Password === confirmPass ) {
-          
+
         $.post("/ta", newtas,
          function(data) {
           // If a table is available... tell user they are booked.
